@@ -12,7 +12,8 @@ Vagrant.configure("2") do |config|
   end 
 
   config.vm.define "windows.vm" do |windows|
-    windows.vm.box = "ferventcoder/win2012r2-x64-nocm"
+    #windows.vm.box = "ferventcoder/win2012r2-x64-nocm"
+    windows.vm.box = "gusztavvargadr/windows-10"
     windows.vm.communicator = "winrm"
     windows.vm.hostname = "windows"
     windows.vm.provision "shell", path: "scripts/windows_agent.ps1"
